@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MiComponente } from './components/mi-componente/mi-componente.component';
-import { PeliculasComponent } from './components/peliculas/peliculas.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component'; //nombre de la clase
+import { FooterComponent } from './components/footer/footer.component';
+import { CabeceraComponent } from './components/cabecera/cabecera.component'; //nombre de la clase
 
 @NgModule({
   declarations: [
     AppComponent,
     MiComponente,
-    PeliculasComponent,
-    PruebasComponent
+    FooterComponent,
+    CabeceraComponent
   ],
   imports: [
     BrowserModule
