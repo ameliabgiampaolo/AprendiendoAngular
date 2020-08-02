@@ -1,20 +1,26 @@
-<h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngFor]</h1>
 
 <div class="container">
 
-  <button class="btn btn-dark mb-3" (click)="activo='primero'">Primero</button>
-  <button class="btn btn-danger mb-3" (click)="activo='segundo'">Segundo</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">TIPO</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">EDAD</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor = "let animal of animales; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{animal.tipo}}</td>
+        <td>{{animal.nombre}}</td>
+        <td>{{animal.edad}}</td>
+      </tr>
+    </tbody>
 
-  <p class="text-info d-none" [ngClass]="{'d-block':activo=='primero'}">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore rerum 
-    consequuntur ipsum, quidem minus doloremque nihil delectus. Ipsa laboriosam hic 
-    deserunt necessitatibus. Facilis obcaecati eius vel dicta perspiciatis quisquam.
-  </p>
-  
-  <p class="text-danger d-none" [ngClass]="{'d-block':activo=='segundo'}">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis ab ex 
-    exercitationem, tenetur voluptatum corrupti porro unde aliquid suscipit distinctio 
-    recusandae delectus iusto, ipsa dolorem veniam vero molestias blanditiis expedita?
-  </p>  
+  </table>
   
 </div>

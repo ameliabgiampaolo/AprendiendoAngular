@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  show:boolean = true
-  title = 'AprendiendoAngular';
+  
+  animales:Array<any> = [
+    {tipo:'Perro', nombre:'Lisa', edad:10},
+    {tipo:'Gato', nombre:'Pepon', edad:2},
+    {tipo:'Pato', nombre:'TanTan', edad:7}
+  ]
 }
